@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JSON Minifier | Compress & Optimize JSON for Production",
+  title: "JSON Minifier | Compress & Optimize JSON",
   description: "Minify JSON instantly by removing whitespace and comments. Reduce file size, speed up APIs, and optimize payloads. Client-side and secure.",
   keywords: [
     "json minifier",

@@ -208,7 +208,7 @@ export default function RootLayout({
 
             {/* Nav Links */}
             <nav className="flex items-center gap-6 text-sm font-bold text-black/80">
-              <Link href="/" className="hover:underline decoration-2 underline-offset-4">Tool-Kit</Link>
+              <Link href="/" className="hover:underline decoration-2 underline-offset-4">Tools</Link>
               <Link href="/about" className="hidden sm:block hover:underline decoration-2 underline-offset-4">Manifesto</Link>
               <a 
                 href="https://github.com/coparallel/json-kit" 

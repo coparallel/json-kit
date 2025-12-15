@@ -31,17 +31,29 @@ export default function ToolShell({
     <div className="animate-in fade-in duration-500">
       
       {/* 1. SEO Header & Breadcrumbs */}
-      <div className="mb-8 border-b-2 border-black/10 pb-8">
-        <nav className="text-sm font-mono font-bold text-gray-500 mb-4 flex items-center gap-2">
-           <Link href="/" className="hover:text-black hover:underline">Tools</Link> 
-           <span>/</span>
-           <span className="bg-yellow-200 text-black px-2 border border-black">{toolName}</span>
+<div className="mb-8 border-b-2 border-black/10 pb-8">
+        
+        {/* Breadcrumb: Kept Mono to look like a file path (Developer friendly) */}
+        <nav className="text-xs md:text-sm font-mono font-bold text-gray-500 mb-6 flex items-center gap-2 uppercase tracking-wider">
+           <Link href="/" className="hover:text-black hover:underline decoration-2 underline-offset-4 transition-all">
+             JSON-KIT
+           </Link> 
+           <span className="text-gray-300">/</span>
+           <span className="bg-yellow-300 text-black px-2 py-0.5 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rounded-sm">
+             {toolName}
+           </span>
         </nav>
         
-        <h1 className="text-3xl md:text-5xl font-serif text-[#1a1a1a] mb-4">{title}</h1>
-        <p className="text-xl text-gray-600 max-w-3xl font-medium leading-relaxed font-serif italic">
+        {/* Title: Heavy Sans-Serif (Matches Homepage Hero) */}
+        <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-[#1a1a1a] mb-6 leading-[0.95]">
+          {title}
+        </h1>
+
+        {/* Description: Clean, highly legible Sans-Serif (Better for SEO/Readability) */}
+        <p className="text-lg md:text-xl text-gray-600 max-w-3xl leading-relaxed font-medium antialiased">
           {description}
         </p>
+        
       </div>
 
       {/* 2. AD SLOT (Top) */}
