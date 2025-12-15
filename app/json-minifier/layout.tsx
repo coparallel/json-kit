@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JSON Minifier | Compress JSON & Reduce File Size",
-  description: "Free online JSON Minifier. Compress JSON by removing whitespace and indentation. Reduce API payload size instantly. 100% Client-side processing.",
+  title: "JSON Minifier | Compress & Optimize JSON for Production",
+  description: "Minify JSON instantly by removing whitespace and comments. Reduce file size, speed up APIs, and optimize payloads. Client-side and secure.",
   keywords: [
-    "minify json", 
-    "compress json", 
-    "json stringify", 
-    "reduce json size", 
-    "json minification"
+    "json minifier",
+    "minify json",
+    "compress json",
+    "json optimization",
+    "reduce json size",
+    "json stringify"
   ],
   openGraph: {
-    title: "JSON Minifier Tool",
-    description: "Compress your JSON data for production. Save bandwidth instantly.",
+    title: "JSON Minifier",
+    description: "Compress JSON data for faster APIs and smaller payloads.",
     type: "website",
   }
 };

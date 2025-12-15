@@ -38,7 +38,7 @@ export default function ToolShell({
            <span className="bg-yellow-200 text-black px-2 border border-black">{toolName}</span>
         </nav>
         
-        <h1 className="text-4xl md:text-6xl font-serif text-[#1a1a1a] mb-4">{title}</h1>
+        <h1 className="text-3xl md:text-5xl font-serif text-[#1a1a1a] mb-4">{title}</h1>
         <p className="text-xl text-gray-600 max-w-3xl font-medium leading-relaxed font-serif italic">
           {description}
         </p>

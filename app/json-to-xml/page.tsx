@@ -147,26 +147,62 @@ export default function JsonToXmlPage() {
   };
 
   return (
-    <ToolShell
-      toolName="JSON to XML"
-      title="JSON to XML Converter"
-      description="Transform JSON data structures into well-formed XML documents. Automatically handles arrays, nesting, and character escaping."
-      relatedLinks={[
-        { name: "XML to JSON", url: "/xml-to-json" },
-        { name: "JSON to YAML", url: "/json-to-yaml" },
-        { name: "JSON Formatter", url: "/json-formatter" }
-      ]}
-      faqs={[
-        {
-          question: "When should I use XML over JSON?",
-          answer: "XML is standard for SOAP APIs, RSS feeds, and enterprise systems that require schema validation (XSD). JSON is faster and lighter, but XML is more verbose and descriptive."
-        },
-        {
-          question: "How are invalid JSON keys handled?",
-          answer: "XML tags cannot contain spaces or start with numbers (e.g., '1st Place'). Our tool automatically sanitizes these keys to valid XML tags (e.g., '_1st_Place') so your code doesn't break."
-        }
-      ]}
-    >
+<ToolShell
+  toolName="JSON to XML Converter"
+  title="JSON to XML Converter – Transform JSON into XML Online"
+  description="Convert JSON data into well-formed XML documents instantly. Handles nested objects, arrays, and character escaping for APIs, feeds, and enterprise systems. 100% client-side."
+  relatedLinks={[
+    { name: "JSON Formatter", url: "/json-formatter" },
+    { name: "JSON Visualizer", url: "/json-visualizer" },
+    { name: "JSON Diff", url: "/json-diff" },
+    { name: "JSON Minifier", url: "/json-minifier" },
+    { name: "JSON to YAML", url: "/json-to-yaml" },
+    { name: "JSON to CSV", url: "/json-to-csv" }
+  ]}
+  faqs={[
+    {
+      question: "What is a JSON to XML converter?",
+      answer:
+        "A JSON to XML converter transforms structured JSON data into well-formed XML documents. This allows JSON data to be used in systems that require XML-based formats."
+    },
+    {
+      question: "When should I use XML instead of JSON?",
+      answer:
+        "XML is commonly used in SOAP APIs, RSS feeds, and enterprise systems that rely on schema validation such as XSD. JSON is lighter and faster, but XML provides stricter structure and validation."
+    },
+    {
+      question: "How does this tool handle nested JSON objects and arrays?",
+      answer:
+        "Nested JSON objects and arrays are converted into hierarchical XML elements while preserving the original data structure. Arrays are represented as repeated XML nodes."
+    },
+    {
+      question: "How are invalid JSON keys handled during XML conversion?",
+      answer:
+        "XML tags must follow strict naming rules. If a JSON key contains invalid characters or starts with a number, the converter automatically sanitizes it into a valid XML tag to prevent errors."
+    },
+    {
+      question: "Should I validate JSON before converting it to XML?",
+      answer:
+        "Yes. Validating and formatting JSON before conversion helps prevent errors and ensures consistent XML output. You can use the JSON Formatter to clean your data first."
+    },
+    {
+      question: "Is this JSON to XML converter secure?",
+      answer:
+        "Yes. All JSON to XML conversion happens entirely in your browser. No data is uploaded, stored, or transmitted to any server."
+    },
+    {
+      question: "Can this tool handle large JSON files?",
+      answer:
+        "Yes. The converter supports large JSON files and deeply nested structures. Performance depends on your device, but most files are processed quickly."
+    },
+    {
+      question: "Is this JSON to XML converter free to use?",
+      answer:
+        "Yes. This tool is completely free with no sign-up, no usage limits, and no data tracking."
+    }
+  ]}
+>
+
       <div className="flex flex-col gap-6">
         
         {/* --- WORKSPACE --- */}

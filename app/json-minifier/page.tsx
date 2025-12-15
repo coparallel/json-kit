@@ -70,30 +70,62 @@ export default function JsonMinifierPage() {
   };
 
   return (
-    <ToolShell
-      toolName="JSON Minifier"
-      title="JSON Minifier"
-      description="Remove unnecessary whitespace, newlines, and comments to reduce JSON file size for production environments."
-      relatedLinks={[
-        { name: "JSON Formatter", url: "/json-formatter" },
-        { name: "JSON to Base64", url: "/json-to-base64" }, // Assuming this exists or will exist
-        { name: "JSON Diff", url: "/json-diff" }
-      ]}
-      faqs={[
-        {
-          question: "How to reduce JSON file size?",
-          answer: "Minification is the best way. By removing whitespace, newlines, and indentation (which are only for human readability), you can often reduce file size by 30-60% without changing the data."
-        },
-        {
-          question: "What is minified JSON?",
-          answer: "Minified JSON is a compact string representation of data. It looks like one long line of text. Computers parse this faster, and it takes up less bandwidth over the network."
-        },
-        {
-          question: "Does minifying change the data?",
-          answer: "No. The data structure (keys and values) remains exactly the same. Only the formatting characters are removed."
-        }
-      ]}
-    >
+<ToolShell
+  toolName="JSON Minifier"
+  title="JSON Minifier – Compress & Optimize JSON for Production"
+  description="Minify JSON instantly by removing unnecessary whitespace and formatting. Reduce file size, optimize API payloads, and improve performance. 100% client-side and secure."
+  relatedLinks={[
+    { name: "JSON Formatter", url: "/json-formatter" },
+    { name: "JSON Diff", url: "/json-diff" },
+    { name: "JSON Visualizer", url: "/json-visualizer" },
+    { name: "JSON to CSV", url: "/json-to-csv" },
+    { name: "JSON to XML", url: "/json-to-xml" },
+    { name: "JSON to YAML", url: "/json-to-yaml" }
+  ]}
+  faqs={[
+    {
+      question: "What is a JSON minifier?",
+      answer:
+        "A JSON minifier is a tool that compresses JSON data by removing unnecessary whitespace, line breaks, and indentation. This reduces file size without changing the actual data or structure."
+    },
+    {
+      question: "How does JSON minification reduce file size?",
+      answer:
+        "JSON minification removes formatting characters that are only useful for human readability. By eliminating spaces and newlines, JSON file size can often be reduced by 30–60%."
+    },
+    {
+      question: "Does minifying JSON change the data?",
+      answer:
+        "No. JSON minification does not modify keys, values, or structure. The data remains exactly the same, only the formatting is removed."
+    },
+    {
+      question: "When should I minify JSON?",
+      answer:
+        "JSON should be minified before sending data over networks, deploying APIs, or serving JSON files in production environments to reduce bandwidth usage and improve performance."
+    },
+    {
+      question: "Should I format JSON before minifying it?",
+      answer:
+        "Yes. Formatting and validating JSON first helps ensure the data is valid and readable. You can use the JSON Formatter to clean the data before minifying it."
+    },
+    {
+      question: "Is this JSON minifier safe for sensitive data?",
+      answer:
+        "Yes. All JSON minification happens entirely in your browser. No data is uploaded, stored, or transmitted to any server."
+    },
+    {
+      question: "Can this tool handle large JSON files?",
+      answer:
+        "Yes. The JSON minifier supports large files and deeply nested structures. Performance depends on your device, but most files are processed instantly."
+    },
+    {
+      question: "Is this JSON minifier free to use?",
+      answer:
+        "Yes. This JSON minifier is completely free, with no sign-up, no usage limits, and no data tracking."
+    }
+  ]}
+>
+
       <div className="flex flex-col gap-8">
         
         {/* --- 1. INPUT SECTION --- */}

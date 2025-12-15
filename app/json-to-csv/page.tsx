@@ -109,32 +109,62 @@ export default function JsonToCsvPage() {
   };
 
   return (
-    <ToolShell
-      toolName="JSON to CSV"
-      title="JSON to CSV Converter"
-      description="Transform nested JSON objects into flat CSV spreadsheets. Perfect for importing data into Microsoft Excel, Google Sheets, or databases."
-      // --- SEO Internal Links ---
-      relatedLinks={[
-        { name: "CSV to JSON", url: "/csv-to-json" },
-        { name: "JSON Formatter", url: "/json-formatter" },
-        { name: "JSON to SQL", url: "/json-to-sql" }
-      ]}
-      // --- Schema Markup FAQs ---
-      faqs={[
-        {
-          question: "Can I convert nested JSON to CSV?",
-          answer: "Yes. Our tool uses a recursive flattening algorithm. If you have an object like { \"user\": { \"name\": \"John\" } }, it becomes a CSV column header named \"user.name\"."
-        },
-        {
-          question: "How to open JSON in Excel?",
-          answer: "Excel cannot open JSON files natively with good formatting. The best way is to use this tool to convert your JSON to CSV (Comma Separated Values), download the file, and then double-click to open it in Excel."
-        },
-        {
-          question: "Is there a limit on file size?",
-          answer: "Since this tool runs in your browser, it depends on your computer's RAM. Files up to 50MB usually process instantly."
-        }
-      ]}
-    >
+<ToolShell
+  toolName="JSON to CSV Converter"
+  title="JSON to CSV Converter – Convert JSON to Excel & CSV Online"
+  description="Convert JSON files into clean, flat CSV spreadsheets. Flatten nested JSON data for Excel, Google Sheets, databases, and data analysis. Runs entirely in your browser."
+  relatedLinks={[
+    { name: "JSON Formatter", url: "/json-formatter" },
+    { name: "JSON Visualizer", url: "/json-visualizer" },
+    { name: "JSON Diff", url: "/json-diff" },
+    { name: "JSON Minifier", url: "/json-minifier" },
+    { name: "JSON to XML", url: "/json-to-xml" },
+    { name: "JSON to YAML", url: "/json-to-yaml" }
+  ]}
+  faqs={[
+    {
+      question: "What is a JSON to CSV converter?",
+      answer:
+        "A JSON to CSV converter transforms JSON data into a flat, tabular CSV format. This allows JSON files to be opened and analyzed in spreadsheet tools like Microsoft Excel and Google Sheets."
+    },
+    {
+      question: "Can this tool convert nested JSON to CSV?",
+      answer:
+        "Yes. The converter uses a recursive flattening algorithm to handle nested objects. For example, a JSON field like { \"user\": { \"name\": \"John\" } } becomes a CSV column named \"user.name\"."
+    },
+    {
+      question: "How do I open JSON data in Excel?",
+      answer:
+        "Excel does not handle JSON files well by default. The recommended approach is to convert JSON to CSV, download the file, and then open it in Excel for proper tabular viewing."
+    },
+    {
+      question: "Does this tool support arrays in JSON?",
+      answer:
+        "Yes. Arrays are supported and are converted into CSV-compatible representations. Complex arrays may be stringified to preserve data integrity."
+    },
+    {
+      question: "Should I format JSON before converting it to CSV?",
+      answer:
+        "Yes. Formatting and validating JSON first helps prevent conversion errors and ensures consistent output. You can use the JSON Formatter to clean your data before conversion."
+    },
+    {
+      question: "Is this JSON to CSV converter secure?",
+      answer:
+        "Yes. All JSON processing happens entirely in your browser. Your data is never uploaded, stored, or transmitted to any server."
+    },
+    {
+      question: "Can this tool handle large JSON files?",
+      answer:
+        "Yes. The converter supports large JSON files and deeply nested structures. Performance depends on your device, but most files process quickly."
+    },
+    {
+      question: "Is this JSON to CSV converter free to use?",
+      answer:
+        "Yes. This tool is completely free with no sign-up, no usage limits, and no data tracking."
+    }
+  ]}
+>
+
       <div className="flex flex-col gap-6">
         
         {/* --- WORKSPACE --- */}

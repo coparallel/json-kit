@@ -56,29 +56,67 @@ export default function JsonDiffPage() {
   };
 
   return (
-    <ToolShell
-      toolName="JSON Diff"
-      title="JSON Diff (Compare)"
-      description="Compare two JSON files to find differences. Visualizes added, removed, and modified fields structurally."
-      relatedLinks={[
-        { name: "JSON Formatter", url: "/json-formatter" },
-        { name: "JSON to CSV", url: "/json-to-csv" }
-      ]}
-      faqs={[
-        {
-          question: "How to find differences between two JSON files?",
-          answer: "Paste your original JSON on the left and the new JSON on the right. Click 'Compare'. Our tool analyzes the structure (not just lines) and highlights changes in Green (Added) and Red (Removed)."
-        },
-        {
-          question: "Is there a git diff for JSON?",
-          answer: "Yes, this tool uses a similar algorithm to Git's diff but optimized for JSON structure. It ignores whitespace changes and key order differences to show you actual data changes."
-        },
-        {
-          question: "Does this work with large files?",
-          answer: "Yes. Processing happens in your browser. For extremely large files (10MB+), it may take a few seconds to compute the difference."
-        }
-      ]}
-    >
+<ToolShell
+  toolName="JSON Difference Checker"
+  title="JSON Difference Checker | Compare JSON Files, Objects & API Responses"
+  description="Compare two JSON files or objects and detect differences instantly. Identify added, removed, and modified fields using a structural JSON diff algorithm built for developers. Runs 100% client-side."
+  relatedLinks={[
+    { name: "JSON Formatter", url: "/json-formatter" },
+    { name: "JSON Visualizer", url: "/json-visualizer" },
+    { name: "JSON Minifier", url: "/json-minifier" },
+    { name: "JSON to CSV", url: "/json-to-csv" },
+    { name: "JSON to XML", url: "/json-to-xml" },
+    { name: "JSON to YAML", url: "/json-to-yaml" }
+  ]}
+  faqs={[
+    {
+      question: "What is a JSON diff checker?",
+      answer:
+        "A JSON diff checker is a tool that compares two JSON files or objects and highlights the differences between them. It detects added, removed, and modified fields by analyzing the JSON structure instead of raw text."
+    },
+    {
+      question: "How do I compare two JSON files online?",
+      answer:
+        "Paste the original JSON into the left editor and the updated JSON into the right editor, then run the comparison. The tool performs a structural JSON diff and visually highlights all changes."
+    },
+    {
+      question: "How is JSON diff different from text or Git diff?",
+      answer:
+        "Unlike text-based or Git diff tools, a JSON diff checker ignores formatting, whitespace, and key order. It compares actual JSON values and structure, ensuring only meaningful data changes are shown."
+    },
+    {
+      question: "Does this JSON diff tool support nested objects and arrays?",
+      answer:
+        "Yes. The tool fully supports deeply nested JSON objects and arrays, making it suitable for comparing complex API responses and hierarchical data structures."
+    },
+    {
+      question: "Can I use JSON diff to compare API responses?",
+      answer:
+        "Yes. This tool is ideal for comparing API responses across environments, validating payload changes, and debugging data mismatches during development and testing."
+    },
+    {
+      question: "Should I format JSON before comparing it?",
+      answer:
+        "Yes. Formatting JSON before comparison improves readability and reduces noise. You can use the JSON Formatter to validate and clean both files before running the diff."
+    },
+    {
+      question: "Is this JSON diff checker secure for sensitive data?",
+      answer:
+        "Yes. All comparisons happen entirely in your browser. No JSON data is uploaded, logged, or stored on any server."
+    },
+    {
+      question: "Can this tool handle large JSON files?",
+      answer:
+        "Yes. The JSON diff checker supports large files and complex structures. Performance depends on your device, but most files up to several megabytes are processed quickly."
+    },
+    {
+      question: "Is this JSON diff checker free to use?",
+      answer:
+        "Yes. This tool is completely free with no sign-up, no usage limits, and no data tracking."
+    }
+  ]}
+>
+
       <div className="flex flex-col gap-8">
         
         {/* --- INPUT AREA (Dual Column) --- */}

@@ -56,30 +56,73 @@ export default function JsonFormatterPage() {
 
   return (
     <ToolShell
-      toolName="JSON Formatter"
-      title="JSON Formatter & Validator"
-      description="The ultimate workspace to clean up messy data. Paste your JSON to validate syntax, prettify the structure, or minify it for production."
+    toolName="JSON Formatter & Validator"
+    title="JSON Formatter, Validator and Beautifier"
+    description="Format, validate, beautify, and minify JSON instantly. Fix invalid syntax, clean messy JSON, and prepare production-ready data — all processed securely in your browser."
+
       // --- Internal Links from your list ---
       relatedLinks={[
         { name: "JSON Minifier", url: "/json-formatter" }, // Self-ref (feature exists here) or separate if you build it
+        { name: "JSON Visualizer(Must Try)", url: "/json-visualizer" },
         { name: "JSON Diff", url: "/json-diff" },
-        { name: "JSON to CSV", url: "/json-to-csv" }
+        { name: "JSON to CSV", url: "/json-to-csv" },
+        { name: "JSON to YAML", url: "/json-to-yaml"},
+        { name: "JSON to XML", url: "/json-to-XML"}
       ]}
       // --- FAQs from your list ---
-      faqs={[
-        { 
-          question: "Why is my JSON invalid?", 
-          answer: "JSON is strict. Common errors include: 1) Using single quotes (') instead of double quotes (\"). 2) Trailing commas after the last item. 3) Missing curly braces. Our tool highlights these syntax errors instantly." 
-        },
-        { 
-          question: "How to format JSON automatically?", 
-          answer: "Simply paste your raw text into the editor above. Click 'Beautify (2 Spaces)' for standard reading, or '4 Spaces' for deep indentation." 
-        },
-        {
-          question: "Is my data safe?",
-          answer: "Yes. This tool runs entirely in your browser using JavaScript. No data is sent to any server."
-        }
-      ]}
+faqs={[
+  {
+    question: "What is a JSON formatter?",
+    answer:
+      "A JSON formatter is a developer tool that formats raw JSON data into a clean, readable structure using proper indentation and spacing. It makes JSON easier to read, debug, and maintain."
+  },
+  {
+    question: "What causes JSON to be invalid?",
+    answer:
+      "JSON becomes invalid when strict syntax rules are broken. Common issues include using single quotes instead of double quotes, trailing commas, missing brackets, or incorrect nesting of objects and arrays."
+  },
+  {
+    question: "How does a JSON formatter validate JSON?",
+    answer:
+      "A JSON formatter validates JSON by parsing the input and checking it against JSON syntax standards. If errors exist, the tool highlights them before formatting the data."
+  },
+  {
+    question: "Can this tool fix invalid JSON?",
+    answer:
+      "This tool identifies syntax errors in invalid JSON and reports them clearly. After fixing the errors, it can instantly format and beautify the JSON into a valid structure."
+  },
+  {
+    question: "What is the difference between JSON formatting and JSON minifying?",
+    answer:
+      "JSON formatting improves readability by adding indentation and line breaks, while JSON minifying removes unnecessary whitespace to reduce file size for production and API usage."
+  },
+  {
+    question: "Is this JSON formatter secure for sensitive data?",
+    answer:
+      "Yes. All JSON formatting and validation happens entirely in your browser. Your data is never uploaded or stored on any server."
+  },
+  {
+    question: "Can I format large or deeply nested JSON files?",
+    answer:
+      "Yes. The tool supports large JSON files and deeply nested objects or arrays. Performance depends on your device, but most complex JSON structures process instantly."
+  },
+  {
+    question: "Does this JSON formatter support arrays and nested objects?",
+    answer:
+      "Yes. The formatter fully supports JSON arrays and deeply nested objects while preserving the original data structure."
+  },
+  {
+    question: "How is a JSON formatter useful for API development?",
+    answer:
+      "JSON is the standard format for REST APIs. This tool helps developers validate API responses, debug payload issues, and prepare clean JSON for production systems."
+  },
+  {
+    question: "Is this JSON formatter free to use?",
+    answer:
+      "Yes. This JSON formatter is completely free with no sign-up, no usage limits, and no data collection."
+  }
+]}
+
     >
       {/* --- TOOL INTERFACE --- */}
       <div className="flex flex-col gap-0">

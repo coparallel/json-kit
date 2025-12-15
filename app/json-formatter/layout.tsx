@@ -1,22 +1,25 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JSON Formatter & Validator | Free Online JSON Beautifier",
-  description: "Instantly format, validate, and beautify JSON data. Fix messy JSON code with one click. 100% client-side privacy—your data never leaves the browser.",
+  title: "JSON Formatter, Validator & Beautifier | Format JSON Online Free",
+  description: "Format, validate, beautify, and lint JSON instantly. Fix invalid JSON, prettify messy data, and minify when needed. 100% client-side. No uploads.",
   keywords: [
-    "json formatter", 
-    "json beautifier", 
-    "format json online", 
-    "validate json", 
-    "json linter", 
-    "json minifier"
+    "json formatter",
+    "json validator",
+    "json beautifier",
+    "format json online",
+    "validate json",
+    "json lint",
+    "pretty print json",
+    "online json tool"
   ],
   openGraph: {
     title: "JSON Formatter & Validator",
-    description: "The fastest way to clean up JSON code. Private, free, and open-source.",
+    description: "The fastest way to format, validate, and clean JSON data online.",
     type: "website",
   }
 };
+
 
 export default function JsonFormatterLayout({
   children,

@@ -68,30 +68,62 @@ export default function JsonToYamlPage() {
   };
 
   return (
-    <ToolShell
-      toolName="JSON to YAML"
-      title="JSON to YAML Converter"
-      description="Convert JSON objects into readable YAML. Essential for Kubernetes manifests, CI/CD pipelines, and configuration management."
-      relatedLinks={[
-        { name: "YAML to JSON", url: "/yaml-to-json" },
-        { name: "JSON to XML", url: "/json-to-xml" },
-        { name: "JSON to TOML", url: "/json-to-toml" }
-      ]}
-      faqs={[
-        {
-          question: "Is YAML better than JSON?",
-          answer: "For configuration files, yes. YAML supports comments, is more human-readable, and uses indentation instead of brackets. However, JSON is better for data transmission (APIs) because it is stricter and easier for machines to parse."
-        },
-        {
-          question: "Can JSON be converted to YAML?",
-          answer: "Yes, easily. Since JSON is technically a subset of YAML syntax, any valid JSON structure can be represented in YAML. This tool handles the conversion automatically, removing braces and adding correct indentation."
-        },
-        {
-          question: "Is this compatible with Kubernetes?",
-          answer: "Absolutely. The YAML generated here adheres to standard formatting required by Kubernetes (k8s), Docker Compose, and Ansible."
-        }
-      ]}
-    >
+  <ToolShell
+  toolName="JSON to YAML Converter"
+  title="JSON to YAML Converter – Generate Clean YAML for DevOps & Kubernetes"
+  description="Convert JSON into clean, human-readable YAML instantly. Ideal for Kubernetes manifests, CI/CD pipelines, Docker Compose, and configuration management. Runs entirely in your browser."
+  relatedLinks={[
+    { name: "JSON Formatter", url: "/json-formatter" },
+    { name: "JSON Visualizer", url: "/json-visualizer" },
+    { name: "JSON Diff", url: "/json-diff" },
+    { name: "JSON Minifier", url: "/json-minifier" },
+    { name: "JSON to XML", url: "/json-to-xml" },
+    { name: "JSON to CSV", url: "/json-to-csv" }
+  ]}
+  faqs={[
+    {
+      question: "What is a JSON to YAML converter?",
+      answer:
+        "A JSON to YAML converter transforms JSON data into YAML format. YAML is more human-readable and is widely used for configuration files in DevOps, cloud, and infrastructure tools."
+    },
+    {
+      question: "Is YAML better than JSON?",
+      answer:
+        "For configuration files, YAML is often preferred because it supports comments, uses indentation instead of brackets, and is easier for humans to read. JSON is better suited for data transmission and APIs due to its strict syntax."
+    },
+    {
+      question: "Can any JSON be converted to YAML?",
+      answer:
+        "Yes. JSON is a subset of YAML, which means any valid JSON structure can be represented in YAML. This tool automatically converts JSON objects and arrays into valid YAML syntax."
+    },
+    {
+      question: "Is the generated YAML compatible with Kubernetes?",
+      answer:
+        "Yes. The YAML output follows standard formatting used by Kubernetes, Docker Compose, Helm, and Ansible, making it suitable for production DevOps workflows."
+    },
+    {
+      question: "Should I format JSON before converting it to YAML?",
+      answer:
+        "Yes. Validating and formatting JSON before conversion helps avoid errors and ensures clean YAML output. You can use the JSON Formatter to clean your data first."
+    },
+    {
+      question: "Does this tool support nested JSON objects and arrays?",
+      answer:
+        "Yes. Deeply nested JSON objects and arrays are fully supported and converted into properly indented YAML while preserving structure."
+    },
+    {
+      question: "Is this JSON to YAML converter secure?",
+      answer:
+        "Yes. All conversion happens entirely in your browser. No data is uploaded, stored, or transmitted to any server."
+    },
+    {
+      question: "Is this JSON to YAML converter free to use?",
+      answer:
+        "Yes. This tool is completely free with no sign-up, no usage limits, and no data tracking."
+    }
+  ]}
+>
+
       <div className="flex flex-col gap-6">
         
         {/* --- WORKSPACE --- */}

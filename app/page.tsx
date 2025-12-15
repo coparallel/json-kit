@@ -21,8 +21,8 @@ const tools = [
   {
     category: "Essentials",
     items: [
-      { name: "JSON Visualizer", url: "/json-visualizer", icon: Network, desc: "Interactive graph view of your data nodes." },
       { name: "JSON Formatter", url: "/json-formatter", icon: FileJson, desc: "Validate, minify, and beautify code." },
+      { name: "JSON Visualizer", url: "/json-visualizer", icon: Network, desc: "Interactive graph view of your data nodes." },
       { name: "JSON Diff", url: "/json-diff", icon: ArrowRightLeft, desc: "Compare two JSON files side-by-side." },
       { name: "JSON Minifier", url: "/json-minifier", icon: ArrowRightLeft, desc: "Compress JSON by removing whitespace and indentation." }
     ]

@@ -190,6 +190,7 @@ export default function JsonVisualizerPage() {
       {/* <div className="w-full h-[90px] mb-8 bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center text-xs font-mono text-gray-400">
         ADVERTISEMENT SPACE
       </div> */}
+  
 
       {/* 3. MAIN WORKSPACE */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
