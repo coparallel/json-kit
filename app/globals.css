@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #F9F7F1; /* Warm paper color */
+  --foreground: #1a1a1a; /* Ink color */
+  --accent: #2563EB;     /* Blue ink for links */
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Optional: Creates a subtle lined paper effect */
+  background-image: linear-gradient(#e5e5e5 1px, transparent 1px);
+  background-size: 100% 40px; 
+}
+
+/* The "Hard Shadow" Utility for that tactile paper feel */
+.paper-shadow {
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+}
+.paper-shadow-sm {
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+}
+.paper-shadow-hover:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+}
+.paper-border {
+  border: 2px solid #1a1a1a;
+}
+/* Custom React Flow Background for Paper Theme */
+.react-flow__background {
+  background-color: #F9F7F1; /* Matches body background */
+}
+.react-flow__controls-button {
+  background: white !important;
+  border: 2px solid black !important;
+  border-bottom: 2px solid black !important; /* Overwrite default library style */
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+  border-radius: 0 !important;
+  margin-bottom: 5px !important;
+}
+.react-flow__controls-button:hover {
+  background: #f0f0f0 !important;
 }
