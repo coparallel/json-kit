@@ -48,9 +48,32 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
             
            {/* Logo area */}
-            <Link href="/" className="flex items-center gap-2 group">
+            {/* <Link href="/" className="flex items-center gap-2 group">
               <img src="/logo.svg" alt="Logo" className="h-75 w-30 group-hover:rotate-3 transition-transform" />
-            </Link>
+            </Link> */}
+<a href="/" className="inline-block">
+  <h1 className="text-2xl md:text-4xl font-black tracking-tighter text-[#1a1a1a]">
+    THE{" "}
+    <span className="text-blue-600 relative inline-block">
+      JSON
+      <svg
+        className="absolute w-full h-3 -bottom-1 left-0 text-blue-200 -z-10"
+        viewBox="0 0 100 10"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 5 Q 50 10 100 5"
+          stroke="currentColor"
+          strokeWidth="8"
+          fill="none"
+        />
+      </svg>
+    </span>{" "}
+    KIT
+  </h1>
+</a>
+
+
 
             {/* Nav Links */}
             <nav className="flex items-center gap-6 text-sm font-bold text-black/80">
