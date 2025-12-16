@@ -55,7 +55,7 @@ export default function RelatedTools() {
 
          {/* Tool 3: Text to Schema */}
          <Link 
-          href="/text-to-schema" 
+          href="#" 
           className="group block bg-white border-2 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all"
         >
           <div className="flex justify-between items-start mb-3">

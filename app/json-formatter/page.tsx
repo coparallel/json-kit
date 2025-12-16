@@ -67,7 +67,7 @@ export default function JsonFormatterPage() {
         { name: "JSON Diff", url: "/json-diff" },
         { name: "JSON to CSV", url: "/json-to-csv" },
         { name: "JSON to YAML", url: "/json-to-yaml"},
-        { name: "JSON to XML", url: "/json-to-XML"}
+        { name: "JSON to XML", url: "/json-to-xml"}
       ]}
       // --- FAQs from your list ---
 faqs={[

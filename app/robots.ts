@@ -6,7 +6,12 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/private/', '/api/'], // Block API routes if you have any
+      disallow: [
+        '/cdn-cgi/',      // Stops the Cloudflare 404 error
+        '/api/',          // Protects your backend routes
+        '/_next/',        // Ignored by default, but good practice
+        '/private/',      // Any admin/private folders
+      ], // Block API routes if you have any
     },
     sitemap: 'https://json-kit.com/sitemap.xml',
   }

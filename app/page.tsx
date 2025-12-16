@@ -175,7 +175,7 @@ export default function Dashboard() {
         </Link>
 
         {/* 3. BOTTOM LEFT: AI Schema */}
-        <Link href="/text-to-schema" className="group absolute bottom-0 left-20 hidden lg:flex flex-col items-center justify-center z-0 hover:z-20">
+        <Link href="#" className="group absolute bottom-0 left-20 hidden lg:flex flex-col items-center justify-center z-0 hover:z-20">
           {/* Pop-up appears ABOVE here because it's at the bottom of screen */}
           <div className="absolute bottom-full mb-2 opacity-0 group-hover:opacity-100 group-hover:-rotate-3 transition-all duration-300 bg-yellow-300 border-2 border-black px-4 py-1 rounded-full font-black text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] whitespace-nowrap">
             AI SCHEMA GEN
@@ -438,7 +438,7 @@ export default function Dashboard() {
                 </p>
                 <ul className="list-disc list-inside space-y-1 ml-2">
                   <li><a href="/json-formatter" className="underline font-semibold hover:text-blue-600">JSON Formatter</a> & Beautifier</li>
-                  <li><a href="/json-validator" className="underline font-semibold hover:text-blue-600">JSON Validator</a> & Syntax Checker</li>
+                  {/* <li><a href="/json-validator" className="underline font-semibold hover:text-blue-600">JSON Validator</a> & Syntax Checker</li> */}
                   <li><a href="/json-visualizer" className="underline font-semibold hover:text-blue-600">JSON Tree Visualizer</a></li>
                   <li><a href="/json-diff" className="underline font-semibold hover:text-blue-600">JSON Diff</a> & Compare Tool</li>
                   <li><a href="/json-minifier" className="underline font-semibold hover:text-blue-600">JSON Minifier</a> & Compressor</li>
@@ -642,7 +642,7 @@ export default function Dashboard() {
             >
               <div itemProp="text">
                 <p className="mb-2">
-                  JSON-Kit's <a href="/json-validator" className="underline font-semibold hover:text-blue-600">validator</a> automatically
+                  JSON-Kit's <a href="#" className="underline font-semibold hover:text-blue-600">validator</a> automatically
                   detects <strong>JSON syntax errors</strong> and provides detailed error messages with line numbers and descriptions.
                 </p>
                 <p className="mb-2">
@@ -703,7 +703,7 @@ export default function Dashboard() {
           <h3 className="font-bold text-xl mb-2">Still have questions about JSON formatting?</h3>
           <p className="text-gray-600 mb-4">
             Try our free <a href="/json-formatter" className="underline font-semibold hover:text-blue-600">JSON Formatter</a> now
-            or explore our complete suite of <a href="/tools" className="underline font-semibold hover:text-blue-600">JSON tools</a>.
+            or explore our complete suite of <a href="#" className="underline font-semibold hover:text-blue-600">JSON tools</a>.
           </p>
           <a
             href="/json-formatter"
