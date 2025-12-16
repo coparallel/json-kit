@@ -18,6 +18,16 @@ const serifFont = DM_Serif_Display({ weight: "400", subsets: ["latin"], variable
 export const metadata: Metadata = {
   metadataBase: new URL("https://json-kit.com"),
 
+  icons: {
+    icon: [
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon.ico' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png' }, // iOS looks for this specific name automatically, but linking it is safer
+    ],
+  },
+
   title: {
     default: "JSON-Kit | Format, Validate & Convert JSON",
     template: "%s | JSON-Kit",
