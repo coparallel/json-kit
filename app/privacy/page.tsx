@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     description: "Our promise: No tracking, no servers, no data storage. Your JSON stays in your browser.",
     type: "website",
     url: "/privacy",
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Privacy Policy' }],
   },
 };
 

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     description: "Explore and understand JSON data visually with an interactive tree.",
     type: "website",
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'JSON Visualizer Preview' }],
+    url: "/json-visualizer",
   },
   
 };

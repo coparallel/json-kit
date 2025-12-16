@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     description: "Why we built the fastest, most private JSON workspace on the web.",
     type: "website",
     url: "/about",
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'About JSON-Kit' }],
   },
 };
 

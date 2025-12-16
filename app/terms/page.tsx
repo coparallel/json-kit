@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     description: "Usage terms and limitations of liability for JSON-Kit tools.",
     type: "website",
     url: "/terms", // Explicitly set this to be safe
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Terms of Use' }],
   },
 };
 
