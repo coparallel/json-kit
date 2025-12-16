@@ -7,10 +7,38 @@ import "./globals.css";
 import Link from "next/link";
 import { Github } from "lucide-react";
 
+// import { Inter, JetBrains_Mono } from "next/font/google"; // or whatever fonts you use
+import "./globals.css";
+// import Footer from "../components/Footer"; 
+// import Header from "@/components/Header"; // If you have one
+
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter",
+  // 👇 THIS IS THE CRITICAL LINE FOR SPEED
+  display: 'swap', 
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  // 👇 ADD THIS HERE TOO
+  display: 'swap',
+});
+
 // 1. FONTS
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: 'swap',});
-const codeFont = JetBrains_Mono({ subsets: ["latin"], variable: "--font-code" });
-const serifFont = DM_Serif_Display({ weight: "400", subsets: ["latin"], variable: "--font-serif" });
+// const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: 'swap',});
+const codeFont = JetBrains_Mono({ 
+  subsets: ["latin"],
+  variable: "--font-code",
+  display: 'swap' 
+});
+const serifFont = DM_Serif_Display({ 
+  weight: "400", 
+  subsets: ["latin"], 
+  variable: "--font-serif",
+  display: 'swap'
+});
 
 // 2. SEO METADATA
 // import type { Metadata } from "next";
