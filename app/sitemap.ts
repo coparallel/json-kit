@@ -15,6 +15,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/json-to-csv",
     "/json-to-xml",
     "/json-to-yaml",
+
+    '/privacy',
+    '/terms',
+    '/about',
   ];
 
   return routes.map((route) => ({

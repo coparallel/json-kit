@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     title: "JSON to YAML Converter",
     description: "Generate clean YAML from JSON for DevOps and cloud configs.",
     type: "website",
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'JSON to YAML Converter' }],
   }
 };
 

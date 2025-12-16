@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     title: "JSON Formatter & Validator",
     description: "The fastest way to format, validate, and clean JSON data online.",
     type: "website",
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'JSON Formatter' }],
   }
 };
 

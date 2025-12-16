@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     title: "JSON to CSV Converter",
     description: "Convert complex JSON into clean CSV files instantly.",
     type: "website",
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'JSON to CSV Converter' }],
   }
 };
 

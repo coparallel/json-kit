@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import { Github } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | JSON-Kit",
-  description: "Why we built the fastest, most private JSON workspace on the web.",
+  title: "About Us",
+  description: "Meet the team behind JSON-Kit. We built the fastest, 100% private client-side JSON workspace because we were tired of slow, ad-filled tools. Built for devs, by devs.",
+  openGraph: {
+    title: "About Us | JSON-Kit",
+    description: "Why we built the fastest, most private JSON workspace on the web.",
+    type: "website",
+    url: "/about",
+  },
 };
 
 export default function About() {

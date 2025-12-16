@@ -105,7 +105,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://json-kit.com",
+    // url: "https://json-kit.com",
     siteName: "JSON-Kit",
     title: "JSON-Kit | Fast, Private JSON Formatter & Tools",
     description:

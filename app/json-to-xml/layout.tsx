@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     title: "JSON to XML Converter",
     description: "Convert JSON arrays and objects to clean XML/SOAP formats instantly.",
     type: "website",
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'JSON to XML Converter' }],
   }
 };
 

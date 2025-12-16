@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: "JSON Diff Checker",
     description: "Visually compare JSON objects and find differences instantly.",
     type: "website",
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'JSON Diff Tool' }],
   }
 };
 

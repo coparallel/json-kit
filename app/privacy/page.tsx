@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | JSON-Kit",
+  title: "Privacy Policy",
   description: "Our strict zero-data policy. We do not store, track, or see your JSON data. Everything is processed locally in your browser.",
+  openGraph: {
+    title: "Privacy Policy | JSON-Kit",
+    description: "Our promise: No tracking, no servers, no data storage. Your JSON stays in your browser.",
+    type: "website",
+    url: "/privacy",
+  },
 };
 
 export default function Privacy() {

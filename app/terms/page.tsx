@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Use | JSON-Kit",
-  description: "Usage terms and limitations of liability for JSON-Kit tools.",
+  title: "Terms of Use",
+  description: "Read the Terms of Use for JSON-Kit. Understand our policies on privacy, liability, and acceptable use. Our tools are free, open, and provided 'as-is' for developers.",
+  openGraph: {
+    title: "Terms of Use | JSON-Kit",
+    description: "Usage terms and limitations of liability for JSON-Kit tools.",
+    type: "website",
+    url: "/terms", // Explicitly set this to be safe
+  },
 };
 
 export default function Terms() {
