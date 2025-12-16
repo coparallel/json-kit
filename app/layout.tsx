@@ -275,7 +275,7 @@ export default function RootLayout({
                   <li><Link href="/json-formatter" className="hover:text-black hover:translate-x-1 transition-transform inline-block">JSON Formatter</Link></li>
                   <li><Link href="/json-minifier" className="hover:text-black hover:translate-x-1 transition-transform inline-block">JSON Minifier</Link></li>
                   <li><Link href="/json-diff" className="hover:text-black hover:translate-x-1 transition-transform inline-block">JSON Difference</Link></li>
-                  <li><Link href="/json-csv" className="hover:text-black hover:translate-x-1 transition-transform inline-block">JSON to CSV</Link></li>
+                  <li><Link href="/json-to-csv" className="hover:text-black hover:translate-x-1 transition-transform inline-block">JSON to CSV</Link></li>
                   <li><Link href="/json-to-xml" className="hover:text-black hover:translate-x-1 transition-transform inline-block">JSON to XML</Link></li>
                   <li><Link href="/json-to-yaml" className="hover:text-black hover:translate-x-1 transition-transform inline-block">JSON to YAML</Link></li>
                 </ul>

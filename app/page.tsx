@@ -443,13 +443,11 @@ export default function Dashboard() {
                   <li><a href="/json-diff" className="underline font-semibold hover:text-blue-600">JSON Diff</a> & Compare Tool</li>
                   <li><a href="/json-minifier" className="underline font-semibold hover:text-blue-600">JSON Minifier</a> & Compressor</li>
                   <li><a href="/json-to-csv" className="underline font-semibold hover:text-blue-600">JSON to CSV</a>,
-                    <a href="/json-to-excel" className="underline font-semibold hover:text-blue-600 ml-1">Excel</a>,
                     <a href="/json-to-xml" className="underline font-semibold hover:text-blue-600 ml-1">XML</a>,
-                    <a href="/json-to-yaml" className="underline font-semibold hover:text-blue-600 ml-1">YAML</a>,
-                    <a href="/json-to-sql" className="underline font-semibold hover:text-blue-600 ml-1">SQL</a> Converters</li>
-                  <li><a href="/csv-to-json" className="underline font-semibold hover:text-blue-600">CSV to JSON</a>,
+                    <a href="/json-to-yaml" className="underline font-semibold hover:text-blue-600 ml-1">YAML</a> Converters</li>
+                  {/* <li><a href="/csv-to-json" className="underline font-semibold hover:text-blue-600">CSV to JSON</a>,
                     <a href="/xml-to-json" className="underline font-semibold hover:text-blue-600 ml-1">XML to JSON</a>,
-                    <a href="/yaml-to-json" className="underline font-semibold hover:text-blue-600 ml-1">YAML to JSON</a></li>
+                    <a href="/yaml-to-json" className="underline font-semibold hover:text-blue-600 ml-1">YAML to JSON</a></li> */}
                 </ul>
                 <p className="mt-2">All tools work <strong>offline</strong> in your browser with no server uploads.</p>
               </div>
@@ -687,13 +685,13 @@ export default function Dashboard() {
                   <li><strong>TSV</strong> (Tab-Separated Values)</li>
                   <li>Plain text and HTML tables</li>
                 </ul>
-                <p className="mt-2">
+                {/* <p className="mt-2">
                   You can also convert <strong>from these formats back to JSON</strong>, including
                   <a href="/csv-to-json" className="underline font-semibold hover:text-blue-600 ml-1">CSV to JSON</a>,
                   <a href="/xml-to-json" className="underline font-semibold hover:text-blue-600 ml-1">XML to JSON</a>,
                   <a href="/yaml-to-json" className="underline font-semibold hover:text-blue-600 ml-1">YAML to JSON</a>, and
                   <a href="/excel-to-json" className="underline font-semibold hover:text-blue-600 ml-1">Excel to JSON</a>.
-                </p>
+                </p> */}
               </div>
             </div>
           </article>
