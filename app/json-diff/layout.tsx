@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JSON Diff Checker | Compare JSON Files Side by Side",
-  description: "Compare two JSON files and highlight differences instantly. Detect additions, deletions, and value changes with a visual JSON diff tool.",
+  title: "JSON Diff | Compare Two Files Instantly",
+  description: "Visual JSON comparison tool. Detect additions, removals, and value changes side-by-side. Semantic diff ignores key order. Free & Private.",
+
   keywords: [
     "json diff",
     "compare json",

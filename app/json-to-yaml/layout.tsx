@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JSON to YAML Converter",
-  description: "Convert JSON to YAML for Kubernetes, Docker Compose, and DevOps workflows. Clean, readable YAML generated instantly. Client-side only.",
+  title: "JSON to YAML | Converter for DevOps",
+  description: "Convert JSON to clean YAML for Kubernetes, Docker, and config files. Validates syntax and handles nested structures perfectly. Client-side privacy.",
   keywords: [
     "json to yaml",
     "convert json to yaml",

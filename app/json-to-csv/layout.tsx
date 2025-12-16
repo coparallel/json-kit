@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JSON to CSV Converter | Convert JSON to Excel & Sheets",
-  description: "Convert JSON to CSV instantly. Flatten nested JSON into Excel-ready spreadsheets for data analysis, reporting, and imports. 100% client-side.",
+  title: "JSON to CSV | Convert to Excel & Sheets",
+  description: "Convert JSON to CSV instantly. Flatten nested objects into Excel-ready spreadsheets for analysis. Download results directly. 100% Private.",
   keywords: [
     "json to csv",
     "convert json to excel",

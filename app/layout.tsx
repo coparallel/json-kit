@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://json-kit.com"),
 
   title: {
-    default: "JSON Formatter & Validator | Free Online JSON Tools",
-    template: "%s | JSON-Kit | Professional JSON Tools",
+    default: "JSON-Kit | Format, Validate & Convert JSON",
+    template: "%s | JSON-Kit",
   },
 
   description:
-    "100% Client-side JSON Formatter, Validator & Viewer. Format, diff, and convert JSON to CSV/XML/SQL instantly in your browser. No servers, 100% Privacy. Works offline.",
+    "Free JSON tools that work instantly. Format, validate, diff, visualize, convert to CSV/XML. 100% client-side, zero tracking, works offline.",
 
   keywords: [
     "json formatter",
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://json-kit.com",
+    canonical: "./",
   },
 
   openGraph: {
@@ -182,28 +182,27 @@ export default function RootLayout({
             {/* <Link href="/" className="flex items-center gap-2 group">
               <img src="/logo.svg" alt="Logo" className="h-75 w-30 group-hover:rotate-3 transition-transform" />
             </Link> */}
-<a href="/" className="inline-block">
-  <h1 className="text-2xl md:text-4xl font-black tracking-tighter text-[#1a1a1a]">
+<Link href="/" className="inline-block group">
+  <div className="text-2xl md:text-4xl font-black tracking-tighter text-[#1a1a1a]">
     THE{" "}
     <span className="text-blue-600 relative inline-block">
       JSON
-      <svg
-        className="absolute w-full h-3 -bottom-1 left-0 text-blue-200 -z-10"
-        viewBox="0 0 100 10"
-        preserveAspectRatio="none"
+      <svg 
+        className="absolute w-full h-3 -bottom-1 left-0 text-blue-200 -z-10" 
+        viewBox="0 0 100 10" 
+        preserveAspectRatio="none" 
       >
-        <path
-          d="M0 5 Q 50 10 100 5"
-          stroke="currentColor"
-          strokeWidth="8"
-          fill="none"
+        <path 
+          d="M0 5 Q 50 10 100 5" 
+          stroke="currentColor" 
+          strokeWidth="8" 
+          fill="none" 
         />
       </svg>
     </span>{" "}
     KIT
-  </h1>
-</a>
-
+  </div>
+</Link>
 
 
             {/* Nav Links */}
@@ -239,8 +238,10 @@ export default function RootLayout({
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
               
               <div className="col-span-1 md:col-span-2 pr-8">
-                 <a href="/" className="inline-block">
-  <h1 className="text-2xl md:text-4xl font-black tracking-tighter text-[#1a1a1a]">
+
+{/* Replace the <a> with <Link> and the <h1> with <div> */}
+<Link href="/" className="inline-block">
+  <div className="text-2xl md:text-4xl font-black tracking-tighter text-[#1a1a1a]">
     THE{" "}
     <span className="text-blue-600 relative inline-block">
       JSON
@@ -258,8 +259,8 @@ export default function RootLayout({
       </svg>
     </span>{" "}
     KIT
-  </h1>
-</a>
+  </div>
+</Link>
                  <p className="text-sm text-gray-600 leading-relaxed font-medium max-w-md">
                    Constructed for developers who value speed and privacy. 
                    Data is processed entirely in your browser memory. 

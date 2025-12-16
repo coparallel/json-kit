@@ -1,23 +1,22 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JSON to YAML Converter",
-  description: "Convert JSON to YAML for Kubernetes, Docker Compose, and DevOps workflows. Clean, readable YAML generated instantly. Client-side only.",
+  title: "JSON to XML Converter | Format & Validate XML",
+  description: "Convert JSON to XML instantly. Perfect for SOAP APIs, enterprise data migration, and legacy systems. Validates structure automatically. 100% Client-side.",
   keywords: [
-    "json to yaml",
-    "convert json to yaml",
-    "yaml generator",
-    "kubernetes yaml",
-    "devops json tools",
-    "json vs yaml"
+    "json to xml",
+    "convert json to xml",
+    "xml converter",
+    "json to soap",
+    "xml formatter",
+    "enterprise data tools"
   ],
   openGraph: {
-    title: "JSON to YAML Converter",
-    description: "Generate clean YAML from JSON for DevOps and cloud configs.",
+    title: "JSON to XML Converter",
+    description: "Convert JSON arrays and objects to clean XML/SOAP formats instantly.",
     type: "website",
   }
 };
-
 
 
 export default function JsonToXmlLayout({

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JSON Visualizer",
-  description: "Visualize JSON data as an interactive tree. Expand, collapse, and explore complex JSON structures instantly. Perfect for debugging APIs.",
+  title: "JSON Visualizer | Interactive Graph View",
+  description: "Visualize complex JSON as interactive graphs. Expand, collapse, and debug API responses instantly. The best way to understand nested data.",
   keywords: [
     "json visualizer",
     "json viewer",
