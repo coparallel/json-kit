@@ -3,18 +3,28 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import ReactFlow, { 
-  Background, 
-  Controls, 
-  applyNodeChanges,
-  applyEdgeChanges,
+// import ReactFlow, { 
+//   Background, 
+//   Controls, 
+//   applyNodeChanges,
+//   applyEdgeChanges,
+//   Node,
+//   Edge,
+//   MarkerType,
+//   NodeChange, 
+//   EdgeChange
+// } from "reactflow";
+import type {
   Node,
   Edge,
-  MarkerType,
-  NodeChange, 
-  EdgeChange
+  NodeChange,
+  EdgeChange,
 } from "reactflow";
+import { MarkerType } from "reactflow";
+
 import "reactflow/dist/style.css";
+import "../styles/react-flow-paper.css";
+
 
 // Editor & Highlighting
 import Editor from "react-simple-code-editor";
@@ -23,7 +33,36 @@ import "prismjs/components/prism-json";
 import "prismjs/themes/prism.css"; 
 
 import { Download, Play, Share2, Copy, FileJson, ArrowRightLeft } from "lucide-react";
-import * as htmlToImage from 'html-to-image';
+// import * as htmlToImage from 'html-to-image';
+
+
+import dynamic from "next/dynamic";
+
+const ReactFlow = dynamic(
+  async () => {
+    const mod = await import("reactflow");
+    return mod.default;
+  },
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-full flex items-center justify-center text-sm text-gray-400">
+        Loading visualizer…
+      </div>
+    ),
+  }
+);
+
+const Background = dynamic(
+  () => import("reactflow").then((m) => m.Background),
+  { ssr: false }
+);
+
+const Controls = dynamic(
+  () => import("reactflow").then((m) => m.Controls),
+  { ssr: false }
+);
+
 
 // --- SEO CONSTANTS ---
 // We can't export 'metadata' from a "use client" file in Next.js 13+.
@@ -126,25 +165,38 @@ export default function JsonVisualizerPage() {
     }
   };
 
-  const handleExport = useCallback(() => {
-    const elem = document.querySelector('.react-flow') as HTMLElement;
-    if (elem) {
-      htmlToImage.toPng(elem, { backgroundColor: '#F9F7F1' }).then((dataUrl) => {
-        const link = document.createElement('a');
-        link.download = 'json-kit-graph.png';
-        link.href = dataUrl;
-        link.click();
-      });
-    }
-  }, []);
+const handleExport = useCallback(async () => {
+  const elem = document.querySelector(".react-flow") as HTMLElement;
+  if (!elem) return;
+
+  const htmlToImage = await import("html-to-image");
+
+  const dataUrl = await htmlToImage.toPng(elem, {
+    backgroundColor: "#F9F7F1",
+  });
+
+  const link = document.createElement("a");
+  link.download = "json-kit-graph.png";
+  link.href = dataUrl;
+  link.click();
+}, []);
+
 
   const handleCopy = () => {
     navigator.clipboard.writeText(code);
     alert("JSON copied to clipboard!");
   };
 
-  const onNodesChange = useCallback((changes: NodeChange[]) => setNodes((nds) => applyNodeChanges(changes, nds)), []);
-  const onEdgesChange = useCallback((changes: EdgeChange[]) => setEdges((eds) => applyEdgeChanges(changes, eds)), []);
+const onNodesChange = useCallback(async (changes: NodeChange[]) => {
+  const { applyNodeChanges } = await import("reactflow");
+  setNodes((nds) => applyNodeChanges(changes, nds));
+}, []);
+
+const onEdgesChange = useCallback(async (changes: EdgeChange[]) => {
+  const { applyEdgeChanges } = await import("reactflow");
+  setEdges((eds) => applyEdgeChanges(changes, eds));
+}, []);
+
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
