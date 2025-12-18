@@ -51,15 +51,18 @@ const serifFont = DM_Serif_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://json-kit.com"),
 
-  icons: {
-    icon: [
-      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/favicon.ico' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png' }, // iOS looks for this specific name automatically, but linking it is safer
-    ],
-  },
+icons: {
+  icon: [
+    { url: '/favicon.ico', sizes: 'any' }, // primary Google favicon
+    { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    { url: '/icon-192.png', sizes: '192x192', type: 'image/png' }, // PWA
+  ],
+  apple: [
+    { url: '/apple-touch-icon.png', sizes: '180x180' },
+  ],
+},
+
 
   title: {
     default: "JSON-Kit | Format, Validate & Convert JSON",
