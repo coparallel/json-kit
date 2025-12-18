@@ -16,6 +16,8 @@ import {
   Terminal
 } from "lucide-react";
 import React from 'react';
+import { MoveLeft, MoveRight } from "lucide-react";
+
 
 
 // --- Tool Data ---
@@ -195,6 +197,35 @@ export default function Dashboard() {
             <Terminal size={100} />
           </div>
         </Link>
+        
+{/* Creator Attribution Callout */}
+<Link
+  href="https://coparallel.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group inline-flex items-center justify-center gap-2 mb-3"
+>
+  {/* Left Indicator */}
+  <MoveRight
+    className="text-yellow-400 rotate-[-10deg] group-hover:scale-110 transition-transform"
+    size={26}
+    strokeWidth={3}
+  />
+
+  {/* Yellow Comic Label */}
+  <div className="bg-yellow-300 border-2 border-black px-4 py-1 rounded-full font-black text-xs md:text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1 group-hover:translate-y-0.5 group-hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all">
+    A CoParallel Project
+  </div>
+
+  {/* Right Indicator */}
+  <MoveLeft
+    className="text-yellow-400 rotate-10 group-hover:scale-110 transition-transform"
+    size={26}
+    strokeWidth={3}
+  />
+</Link>
+
+
         <div className="inline-block border-2 border-black bg-white px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)]">
           v1.0.0 Public Live
         </div>
