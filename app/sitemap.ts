@@ -15,6 +15,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/json-to-csv",
     "/json-to-xml",
     "/json-to-yaml",
+    "/json-validator",
+    "/json-compressor",
+    "/json-beautifier",
+    "/json-editor",
+    "/json-viewer",
+    "/json-parser",
+    "/json-lint",
 
     '/privacy',
     '/terms',

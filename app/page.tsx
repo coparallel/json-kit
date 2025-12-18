@@ -25,10 +25,17 @@ const tools = [
   {
     category: "Essentials",
     items: [
-      { name: "JSON Formatter", url: "/json-formatter", icon: FileJson, desc: "Validate, minify, and beautify code." },
+      { name: "JSON Formatter", url: "/json-formatter", icon: FileJson, desc: "Format, Beautify Json Online Free and Fast." },
+      { name: "JSON Validator", url: "/json-validator", icon: FileJson, desc: "Validate Json online Free." },
       { name: "JSON Visualizer", url: "/json-visualizer", icon: Network, desc: "Interactive graph view of your data nodes." },
+      { name: "JSON Beautifier", url: "/json-beautifier", icon: Network, desc: "Beautify Json Online free." },
+      { name: "JSON Compressor", url: "/json-compressor", icon: Network, desc: "Compress Json Online free." },
+      { name: "JSON Editor", url: "/json-editor", icon: Network, desc: "Edit Json online for free." },
+      { name: "JSON Viewer", url: "/json-viewer", icon: Network, desc: "View, Edit, Format Json online for free." },
       { name: "JSON Diff", url: "/json-diff", icon: ArrowRightLeft, desc: "Compare two JSON files side-by-side." },
-      { name: "JSON Minifier", url: "/json-minifier", icon: ArrowRightLeft, desc: "Compress JSON by removing whitespace and indentation." }
+      { name: "JSON Minifier", url: "/json-minifier", icon: ArrowRightLeft, desc: "Compress JSON by removing whitespace and indentation." },
+      { name: "JSON Parser", url: "/json-parser", icon: ArrowRightLeft, desc: "Parse Json Online Free." },
+      { name: "JSON Lint", url: "/json-lint", icon: ArrowRightLeft, desc: "Lint Json Online Free." }
     ]
   },
   {
@@ -384,349 +391,261 @@ export default function Dashboard() {
 
         <div className="grid md:grid-cols-2 gap-10">
 
-          {/* FAQ 1: Privacy & Security */}
-          <article
-            className="space-y-2"
-            itemScope
-            itemProp="mainEntity"
-            itemType="https://schema.org/Question"
-          >
-            <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
-              <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
-              Is my JSON data secure and private?
-            </h3>
-            <div
-              className="text-gray-600 text-sm leading-relaxed pl-8"
-              itemScope
-              itemProp="acceptedAnswer"
-              itemType="https://schema.org/Answer"
-            >
-              <div itemProp="text">
-                <p className="mb-2">
-                  <strong>Yes, absolutely.</strong> JSON-Kit runs entirely <strong>client-side</strong> in your browser.
-                  All formatting, validation, visualization, and conversion happens locally on your device.
-                </p>
-                <p>
-                  Your JSON data is <strong>never uploaded, transmitted, stored, or logged</strong> on any server.
-                  This makes JSON-Kit completely safe for API responses, configuration files, authentication tokens,
-                  and sensitive payloads. Your privacy is guaranteed.
-                </p>
-              </div>
-            </div>
-          </article>
+            {/* FAQ 1: Security */}
+  <article itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+    <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
+      <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
+      Is my JSON data secure and private?
+    </h3>
+    <div
+      className="text-gray-600 text-sm leading-relaxed pl-8"
+      itemScope
+      itemProp="acceptedAnswer"
+      itemType="https://schema.org/Answer"
+    >
+      <div itemProp="text">
+        <p className="mb-2">
+          <strong>Yes.</strong> JSON-Kit runs entirely <strong>client-side</strong>. All parsing,
+          formatting, validation, compression, and conversion happens locally in your browser.
+        </p>
+        <p className="mb-2">
+          This applies to all tools including
+          <a href="/json-formatter" className="underline font-semibold ml-1">JSON Formatter</a>,
+          <a href="/json-editor" className="underline font-semibold ml-1">JSON Editor</a>,
+          <a href="/json-validator" className="underline font-semibold ml-1">JSON Validator</a>,
+          <a href="/json-parser" className="underline font-semibold ml-1">JSON Parser</a>, and
+          <a href="/json-lint" className="underline font-semibold ml-1">JSON Lint</a>.
+        </p>
+        <p>Your data is <strong>never uploaded, stored, or logged</strong>.</p>
+      </div>
+    </div>
+  </article>
 
-          {/* FAQ 2: File Size */}
-          <article
-            className="space-y-2"
-            itemScope
-            itemProp="mainEntity"
-            itemType="https://schema.org/Question"
-          >
-            <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
-              <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
-              What is the maximum JSON file size limit?
-            </h3>
-            <div
-              className="text-gray-600 text-sm leading-relaxed pl-8"
-              itemScope
-              itemProp="acceptedAnswer"
-              itemType="https://schema.org/Answer"
-            >
-              <div itemProp="text">
-                <p className="mb-2">
-                  JSON-Kit uses your device's memory, so limits depend on your system. Most JSON files
-                  under <strong>50MB</strong> process instantly for formatting, validation, and conversion.
-                </p>
-                <p>
-                  Visual tools like the <a href="/json-visualizer" className="underline font-semibold hover:text-blue-600">JSON Tree Visualizer</a> may
-                  experience slower performance on files larger than 10MB due to rendering complexity. For very large files,
-                  use our <a href="/json-minifier" className="underline font-semibold hover:text-blue-600">JSON Minifier</a> or
-                  <a href="/json-formatter" className="underline font-semibold hover:text-blue-600 ml-1">JSON Formatter</a> optimized for performance.
-                </p>
-              </div>
-            </div>
-          </article>
+  {/* FAQ 2: File Size */}
+  <article itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+    <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
+      <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
+      What is the maximum JSON file size supported?
+    </h3>
+    <div className="text-gray-600 text-sm leading-relaxed pl-8" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+      <div itemProp="text">
+        <p className="mb-2">
+          Most JSON files under <strong>50MB</strong> process instantly depending on your device.
+        </p>
+        <p>
+          For large payloads, use
+          <a href="/json-minifier" className="underline font-semibold ml-1">JSON Minifier</a> or
+          <a href="/json-compressor" className="underline font-semibold ml-1">JSON Compressor</a>.
+          Visual tools like
+          <a href="/json-visualizer" className="underline font-semibold ml-1">JSON Visualizer</a>
+          may slow down on very large files.
+        </p>
+      </div>
+    </div>
+  </article>
 
-          {/* FAQ 3: Tools Coverage */}
-          <article
-            className="space-y-2"
-            itemScope
-            itemProp="mainEntity"
-            itemType="https://schema.org/Question"
-          >
-            <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
-              <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
-              What JSON tools does JSON-Kit provide?
-            </h3>
-            <div
-              className="text-gray-600 text-sm leading-relaxed pl-8"
-              itemScope
-              itemProp="acceptedAnswer"
-              itemType="https://schema.org/Answer"
-            >
-              <div itemProp="text">
-                <p className="mb-2">
-                  JSON-Kit offers a complete suite of <strong>free online JSON tools</strong> for developers:
-                </p>
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li><a href="/json-formatter" className="underline font-semibold hover:text-blue-600">JSON Formatter</a> & Beautifier</li>
-                  {/* <li><a href="/json-validator" className="underline font-semibold hover:text-blue-600">JSON Validator</a> & Syntax Checker</li> */}
-                  <li><a href="/json-visualizer" className="underline font-semibold hover:text-blue-600">JSON Tree Visualizer</a></li>
-                  <li><a href="/json-diff" className="underline font-semibold hover:text-blue-600">JSON Diff</a> & Compare Tool</li>
-                  <li><a href="/json-minifier" className="underline font-semibold hover:text-blue-600">JSON Minifier</a> & Compressor</li>
-                  <li><a href="/json-to-csv" className="underline font-semibold hover:text-blue-600">JSON to CSV</a>,
-                    <a href="/json-to-xml" className="underline font-semibold hover:text-blue-600 ml-1">XML</a>,
-                    <a href="/json-to-yaml" className="underline font-semibold hover:text-blue-600 ml-1">YAML</a> Converters</li>
-                  {/* <li><a href="/csv-to-json" className="underline font-semibold hover:text-blue-600">CSV to JSON</a>,
-                    <a href="/xml-to-json" className="underline font-semibold hover:text-blue-600 ml-1">XML to JSON</a>,
-                    <a href="/yaml-to-json" className="underline font-semibold hover:text-blue-600 ml-1">YAML to JSON</a></li> */}
-                </ul>
-                <p className="mt-2">All tools work <strong>offline</strong> in your browser with no server uploads.</p>
-              </div>
-            </div>
-          </article>
+  {/* FAQ 3: Tools */}
+  <article itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+    <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
+      <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
+      What JSON tools does JSON-Kit provide?
+    </h3>
+    <div className="text-gray-600 text-sm leading-relaxed pl-8" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+      <div itemProp="text">
+        <ul className="list-disc list-inside space-y-1">
+          <li><a href="/json-formatter" className="underline font-semibold">JSON Formatter & Beautifier</a></li>
+          <li><a href="/json-validator" className="underline font-semibold">JSON Validator</a></li>
+          <li><a href="/json-lint" className="underline font-semibold">JSON Lint</a></li>
+          <li><a href="/json-parser" className="underline font-semibold">JSON Parser</a></li>
+          <li><a href="/json-editor" className="underline font-semibold">JSON Editor</a></li>
+          <li><a href="/json-viewer" className="underline font-semibold">JSON Viewer</a></li>
+          <li><a href="/json-visualizer" className="underline font-semibold">JSON Visualizer</a></li>
+          <li><a href="/json-diff" className="underline font-semibold">JSON Diff</a></li>
+          <li><a href="/json-minifier" className="underline font-semibold">JSON Minifier</a></li>
+          <li><a href="/json-compressor" className="underline font-semibold">JSON Compressor & Decompressor</a></li>
+          <li><a href="/json-to-csv" className="underline font-semibold">JSON to CSV</a></li>
+          <li><a href="/json-to-xml" className="underline font-semibold">JSON to XML</a></li>
+          <li><a href="/json-to-yaml" className="underline font-semibold">JSON to YAML</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
 
-          {/* FAQ 4: Use Cases */}
-          <article
-            className="space-y-2"
-            itemScope
-            itemProp="mainEntity"
-            itemType="https://schema.org/Question"
-          >
-            <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
-              <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
-              Who uses JSON-Kit and what are common use cases?
-            </h3>
-            <div
-              className="text-gray-600 text-sm leading-relaxed pl-8"
-              itemScope
-              itemProp="acceptedAnswer"
-              itemType="https://schema.org/Answer"
-            >
-              <div itemProp="text">
-                <p className="mb-2">
-                  JSON-Kit is used by <strong>software developers, DevOps engineers, data analysts,
-                    QA testers, API developers, data scientists,</strong> and students.
-                </p>
-                <p className="mb-2"><strong>Common use cases include:</strong></p>
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li>Debugging <strong>REST API responses</strong> and GraphQL queries</li>
-                  <li>Formatting JSON for code readability and documentation</li>
-                  <li>Validating <strong>JSON syntax errors</strong> before deployment</li>
-                  <li>Comparing JSON configuration files for differences</li>
-                  <li>Converting JSON data to <strong>CSV for Excel analysis</strong></li>
-                  <li>Preparing production-ready <strong>minified JSON</strong></li>
-                  <li>Testing API endpoints during development</li>
-                  <li>Visualizing complex nested JSON structures</li>
-                  <li>Creating config files for <strong>Docker, Kubernetes, and cloud deployments</strong></li>
-                </ul>
-              </div>
-            </div>
-          </article>
+  {/* FAQ 4: Errors */}
+  <article itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+    <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
+      <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
+      How do I fix invalid JSON errors?
+    </h3>
+    <div className="text-gray-600 text-sm leading-relaxed pl-8" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+      <div itemProp="text">
+        <p className="mb-2">
+          Use the
+          <a href="/json-validator" className="underline font-semibold ml-1">JSON Validator</a>
+          to detect syntax issues like missing commas or invalid quotes.
+        </p>
+        <p>
+          For deeper diagnostics, use
+          <a href="/json-lint" className="underline font-semibold ml-1">JSON Lint</a> or
+          <a href="/json-parser" className="underline font-semibold ml-1">JSON Parser</a>
+          to see exact error locations and parsing behavior.
+        </p>
+      </div>
+    </div>
+  </article>
 
-          {/* FAQ 5: Pricing */}
-          <article
-            className="space-y-2"
-            itemScope
-            itemProp="mainEntity"
-            itemType="https://schema.org/Question"
-          >
-            <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
-              <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
-              Is JSON-Kit free to use? Are there any limitations?
-            </h3>
-            <div
-              className="text-gray-600 text-sm leading-relaxed pl-8"
-              itemScope
-              itemProp="acceptedAnswer"
-              itemType="https://schema.org/Answer"
-            >
-              <div itemProp="text">
-                <p className="mb-2">
-                  <strong>Yes, JSON-Kit is completely free</strong> to use with <strong>no sign-ups,
-                    registrations, or usage limits.</strong> All core tools including JSON formatting,
-                  validation, visualization, comparison, and conversion are available at no cost.
-                </p>
-                <p>
-                  There are <strong>no file size restrictions, no daily usage caps, and no premium tiers.</strong> The
-                  platform is supported through minimal, non-intrusive advertising. You can use JSON-Kit
-                  unlimited times, process unlimited files, and access all features forever free.
-                </p>
-              </div>
-            </div>
-          </article>
+  {/* FAQ 5: Conversion */}
+  <article itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+    <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
+      <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
+      What formats can I convert JSON into?
+    </h3>
+    <div className="text-gray-600 text-sm leading-relaxed pl-8" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+      <div itemProp="text">
+        <p className="mb-2">JSON-Kit supports:</p>
+        <ul className="list-disc list-inside space-y-1">
+          <li>CSV, XML, YAML</li>
+          <li>Excel-ready tables</li>
+          <li>SQL insert statements</li>
+        </ul>
+        <p className="mt-2">
+          After conversion, optimize output using
+          <a href="/json-formatter" className="underline font-semibold ml-1">Formatter</a>,
+          <a href="/json-minifier" className="underline font-semibold ml-1">Minifier</a>, or
+          <a href="/json-compressor" className="underline font-semibold ml-1">Compressor</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+  {/* FAQ 6: Viewer vs Editor */}
+<article itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+  <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
+    <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
+    What is the difference between JSON Viewer and JSON Editor?
+  </h3>
+  <div
+    className="text-gray-600 text-sm leading-relaxed pl-8"
+    itemScope
+    itemProp="acceptedAnswer"
+    itemType="https://schema.org/Answer"
+  >
+    <div itemProp="text">
+      <p className="mb-2">
+        The <a href="/json-viewer" className="underline font-semibold">JSON Viewer</a> is
+        <strong> read-only</strong> and optimized for safely inspecting large JSON structures and API responses.
+      </p>
+      <p>
+        The <a href="/json-editor" className="underline font-semibold">JSON Editor</a> allows you to
+        <strong> modify, add, delete, and reorder</strong> JSON data with real-time validation.
+      </p>
+    </div>
+  </div>
+</article>
 
-          {/* FAQ 6: API Access */}
-          <article
-            className="space-y-2"
-            itemScope
-            itemProp="mainEntity"
-            itemType="https://schema.org/Question"
-          >
-            <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
-              <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
-              Does JSON-Kit provide an API or developer access?
-            </h3>
-            <div
-              className="text-gray-600 text-sm leading-relaxed pl-8"
-              itemScope
-              itemProp="acceptedAnswer"
-              itemType="https://schema.org/Answer"
-            >
-              <div itemProp="text">
-                <p className="mb-2">
-                  Currently, JSON-Kit focuses on providing fast, <strong>client-side browser tools</strong> rather
-                  than a hosted API service. This ensures maximum privacy and performance.
-                </p>
-                <p>
-                  However, we're exploring API options for developers who need <strong>programmatic access</strong> to
-                  JSON formatting, validation, and conversion. Parts of our code logic are open-source. For integration
-                  needs, you can embed our tools or use our planned developer API for <strong>CI/CD pipelines, automated
-                    testing, and workflow automation.</strong>
-                </p>
-              </div>
-            </div>
-          </article>
+{/* FAQ 7: Lint vs Validator */}
+<article itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+  <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
+    <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
+    What is the difference between JSON Lint and JSON Validator?
+  </h3>
+  <div
+    className="text-gray-600 text-sm leading-relaxed pl-8"
+    itemScope
+    itemProp="acceptedAnswer"
+    itemType="https://schema.org/Answer"
+  >
+    <div itemProp="text">
+      <p className="mb-2">
+        <a href="/json-validator" className="underline font-semibold">JSON Validator</a>
+        simply checks whether JSON is valid or invalid.
+      </p>
+      <p>
+        <a href="/json-lint" className="underline font-semibold">JSON Lint</a> goes deeper by
+        explaining <strong>why</strong> the JSON is broken, highlighting exact line numbers,
+        and suggesting fixes.
+      </p>
+    </div>
+  </div>
+</article>
 
-          {/* FAQ 7: Comparison with competitors */}
-          <article
-            className="space-y-2"
-            itemScope
-            itemProp="mainEntity"
-            itemType="https://schema.org/Question"
-          >
-            <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
-              <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
-              How is JSON-Kit better than JSONLint or JSONFormatter.org?
-            </h3>
-            <div
-              className="text-gray-600 text-sm leading-relaxed pl-8"
-              itemScope
-              itemProp="acceptedAnswer"
-              itemType="https://schema.org/Answer"
-            >
-              <div itemProp="text">
-                <p className="mb-2">
-                  JSON-Kit offers several advantages over alternatives like <strong>JSONLint and JSONFormatter.org:</strong>
-                </p>
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li><strong>100% client-side processing</strong> for complete privacy (no server uploads)</li>
-                  <li><strong>Interactive tree view</strong> visualization of nested JSON structures</li>
-                  <li>Built-in <strong>diff comparison tool</strong> for comparing JSON files</li>
-                  <li>Multiple export formats: <strong>CSV, Excel, XML, YAML, SQL</strong></li>
-                  <li><strong>Modern user interface</strong> with dark mode support</li>
-                  <li><strong>Faster performance</strong> with optimized parsing</li>
-                  <li>Works <strong>completely offline</strong> after initial load</li>
-                  <li>Comprehensive <strong>suite of tools in one place</strong></li>
-                  <li>Actively maintained with <strong>regular updates</strong> and new features</li>
-                </ul>
-              </div>
-            </div>
-          </article>
+{/* FAQ 8: Parsing */}
+<article itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+  <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
+    <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
+    How does JSON parsing work?
+  </h3>
+  <div
+    className="text-gray-600 text-sm leading-relaxed pl-8"
+    itemScope
+    itemProp="acceptedAnswer"
+    itemType="https://schema.org/Answer"
+  >
+    <div itemProp="text">
+      <p className="mb-2">
+        JSON parsing converts a JSON string into a JavaScript object, similar to
+        how <code>JSON.parse()</code> works.
+      </p>
+      <p>
+        You can test real parsing behavior using the
+        <a href="/json-parser" className="underline font-semibold ml-1">JSON Parser</a>
+        to catch syntax errors before using JSON in your application.
+      </p>
+    </div>
+  </div>
+</article>
 
-          {/* FAQ 8: Offline usage */}
-          <article
-            className="space-y-2"
-            itemScope
-            itemProp="mainEntity"
-            itemType="https://schema.org/Question"
-          >
-            <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
-              <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
-              Can I use JSON-Kit offline without an internet connection?
-            </h3>
-            <div
-              className="text-gray-600 text-sm leading-relaxed pl-8"
-              itemScope
-              itemProp="acceptedAnswer"
-              itemType="https://schema.org/Answer"
-            >
-              <div itemProp="text">
-                <p className="mb-2">
-                  <strong>Yes!</strong> Once you load JSON-Kit in your browser, all tools work <strong>completely offline.</strong> Since
-                  everything runs client-side with no server communication, you can format, validate, visualize, and
-                  convert JSON without any internet connection.
-                </p>
-                <p>
-                  This makes JSON-Kit perfect for working with <strong>sensitive data in air-gapped environments</strong>, during
-                  flights, or in locations with poor connectivity. Simply load the page once, and you can use it offline indefinitely.
-                </p>
-              </div>
-            </div>
-          </article>
+{/* FAQ 9: Compression vs Minification */}
+<article itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+  <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
+    <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
+    What is the difference between JSON minification and compression?
+  </h3>
+  <div
+    className="text-gray-600 text-sm leading-relaxed pl-8"
+    itemScope
+    itemProp="acceptedAnswer"
+    itemType="https://schema.org/Answer"
+  >
+    <div itemProp="text">
+      <p className="mb-2">
+        <a href="/json-minifier" className="underline font-semibold">Minification</a>
+        removes whitespace and formatting (~30–40% reduction).
+      </p>
+      <p>
+        <a href="/json-compressor" className="underline font-semibold">Compression</a>
+        (Gzip/Brotli) encodes the data for transport, often reducing size by
+        <strong> 70–90%</strong>. Best practice is to use both.
+      </p>
+    </div>
+  </div>
+</article>
 
-          {/* FAQ 9: Error fixing */}
-          <article
-            className="space-y-2"
-            itemScope
-            itemProp="mainEntity"
-            itemType="https://schema.org/Question"
-          >
-            <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
-              <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
-              How do I validate and fix invalid JSON syntax errors?
-            </h3>
-            <div
-              className="text-gray-600 text-sm leading-relaxed pl-8"
-              itemScope
-              itemProp="acceptedAnswer"
-              itemType="https://schema.org/Answer"
-            >
-              <div itemProp="text">
-                <p className="mb-2">
-                  JSON-Kit's <a href="#" className="underline font-semibold hover:text-blue-600">validator</a> automatically
-                  detects <strong>JSON syntax errors</strong> and provides detailed error messages with line numbers and descriptions.
-                </p>
-                <p className="mb-2">
-                  Common errors include: missing commas, unclosed brackets, trailing commas, unquoted keys, and invalid escape sequences.
-                  The validator <strong>highlights the exact location</strong> of errors, making them easy to fix.
-                </p>
-                <p>
-                  Simply paste your JSON, and any syntax errors will be immediately displayed with suggestions for correction.
-                  The formatter also <strong>auto-fixes many common formatting issues.</strong>
-                </p>
-              </div>
-            </div>
-          </article>
+{/* FAQ 10: Comparison */}
+<article itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+  <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
+    <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
+    Can I compare two JSON files to see differences?
+  </h3>
+  <div
+    className="text-gray-600 text-sm leading-relaxed pl-8"
+    itemScope
+    itemProp="acceptedAnswer"
+    itemType="https://schema.org/Answer"
+  >
+    <div itemProp="text">
+      <p className="mb-2">
+        Yes. Use the
+        <a href="/json-diff" className="underline font-semibold ml-1">JSON Diff</a>
+        tool to compare two JSON files side-by-side.
+      </p>
+      <p>
+        Differences in values, keys, and structure are highlighted clearly,
+        making it ideal for configuration audits and API response comparisons.
+      </p>
+    </div>
+  </div>
+</article>
 
-          {/* FAQ 10: Conversion formats */}
-          <article
-            className="space-y-2"
-            itemScope
-            itemProp="mainEntity"
-            itemType="https://schema.org/Question"
-          >
-            <h3 className="font-bold text-lg flex items-center gap-2" itemProp="name">
-              <span className="bg-black text-white w-6 h-6 flex items-center justify-center rounded-full text-xs">?</span>
-              What JSON file formats can I convert to?
-            </h3>
-            <div
-              className="text-gray-600 text-sm leading-relaxed pl-8"
-              itemScope
-              itemProp="acceptedAnswer"
-              itemType="https://schema.org/Answer"
-            >
-              <div itemProp="text">
-                <p className="mb-2">JSON-Kit supports <strong>conversion to multiple formats:</strong></p>
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li><strong>CSV</strong> (Comma-Separated Values) for Excel and spreadsheet analysis</li>
-                  <li><strong>XLSX/XLS</strong> (Microsoft Excel format) with proper formatting</li>
-                  <li><strong>XML</strong> for legacy systems and SOAP APIs</li>
-                  <li><strong>YAML/YML</strong> for configuration files and Kubernetes</li>
-                  <li><strong>SQL INSERT statements</strong> for database imports</li>
-                  <li><strong>TSV</strong> (Tab-Separated Values)</li>
-                  <li>Plain text and HTML tables</li>
-                </ul>
-                {/* <p className="mt-2">
-                  You can also convert <strong>from these formats back to JSON</strong>, including
-                  <a href="/csv-to-json" className="underline font-semibold hover:text-blue-600 ml-1">CSV to JSON</a>,
-                  <a href="/xml-to-json" className="underline font-semibold hover:text-blue-600 ml-1">XML to JSON</a>,
-                  <a href="/yaml-to-json" className="underline font-semibold hover:text-blue-600 ml-1">YAML to JSON</a>, and
-                  <a href="/excel-to-json" className="underline font-semibold hover:text-blue-600 ml-1">Excel to JSON</a>.
-                </p> */}
-              </div>
-            </div>
-          </article>
 
         </div>
 

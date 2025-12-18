@@ -76,11 +76,19 @@ export default function JsonMinifierPage() {
   description="Minify JSON instantly by removing unnecessary whitespace and formatting. Reduce file size, optimize API payloads, and improve performance. 100% client-side and secure."
   relatedLinks={[
     { name: "JSON Formatter", url: "/json-formatter" },
-    { name: "JSON Diff", url: "/json-diff" },
     { name: "JSON Visualizer", url: "/json-visualizer" },
-    { name: "JSON to CSV", url: "/json-to-csv" },
+    { name: "JSON Validator", url: "/json-validator" },
+    { name: "JSON Diff", url: "/json-diff" },
+    { name: "JSON Minifier", url: "/json-minifier" },
+    { name: "JSON Beautifier", url: "/json-beautifier" },
+    { name: "JSON Compressor & Decompressor", url: "/json-compressor" },
+    { name: "JSON Editor", url: "/json-editor" },
+    { name: "JSON viewer", url: "/json-viewer" },
     { name: "JSON to XML", url: "/json-to-xml" },
-    { name: "JSON to YAML", url: "/json-to-yaml" }
+    { name: "JSON to YAML", url: "/json-to-yaml" },
+    { name: "JSON to CSV", url: "/json-to-csv" },
+    { name: "JSON Lint", url: "/json-lint" },
+    { name: "JSON Parser", url: "/json-parser" }
   ]}
   faqs={[
     {

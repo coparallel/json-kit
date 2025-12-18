@@ -62,12 +62,20 @@ export default function JsonFormatterPage() {
 
       // --- Internal Links from your list ---
       relatedLinks={[
-        { name: "JSON Minifier", url: "/json-formatter" }, // Self-ref (feature exists here) or separate if you build it
-        { name: "JSON Visualizer(Must Try)", url: "/json-visualizer" },
-        { name: "JSON Diff", url: "/json-diff" },
-        { name: "JSON to CSV", url: "/json-to-csv" },
-        { name: "JSON to YAML", url: "/json-to-yaml"},
-        { name: "JSON to XML", url: "/json-to-xml"}
+    { name: "JSON Formatter", url: "/json-formatter" },
+    { name: "JSON Visualizer", url: "/json-visualizer" },
+    { name: "JSON Validator", url: "/json-validator" },
+    { name: "JSON Diff", url: "/json-diff" },
+    { name: "JSON Minifier", url: "/json-minifier" },
+    { name: "JSON Beautifier", url: "/json-beautifier" },
+    { name: "JSON Compressor & Decompressor", url: "/json-compressor" },
+    { name: "JSON Editor", url: "/json-editor" },
+    { name: "JSON viewer", url: "/json-viewer" },
+    { name: "JSON to XML", url: "/json-to-xml" },
+    { name: "JSON to YAML", url: "/json-to-yaml" },
+    { name: "JSON to CSV", url: "/json-to-csv" },
+    { name: "JSON Lint", url: "/json-lint" },
+    { name: "JSON Parser", url: "/json-parser" }
       ]}
       // --- FAQs from your list ---
 faqs={[
