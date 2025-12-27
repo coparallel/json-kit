@@ -287,7 +287,7 @@ faqs={[
         {/* --- SECTION 1: COMPRESS JSON --- */}
         <div className="border-b-2 border-black/10 pb-8">
            <h2 className="text-3xl font-serif font-black mb-6 flex items-center gap-3">
-             <Archive size={32} /> Compress JSON
+             <Archive size={32} /> Compress JSONNN
            </h2>
            
            {/* Input Editor */}
