@@ -1,4 +1,4 @@
-json-Kit
+Json-Kit
 
 A production-grade suite of JSON utilities — built and shipped using Coparallel
 
